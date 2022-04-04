@@ -42,51 +42,7 @@ export default function GameOfLife () {
         return rows;
     });
 
-    
 
-    // const runSimulation = useCallback(() => {
-    //     if (runningReference.current) {
-    //         return;
-    //     }
-
-    //     setGrid(g => {
-    //         return produce(g, new_grid => {
-    //             for(let i = 0; i < rowsReference.current; i++) {
-    //                 for(let k = 0; k < colReference.current; k++) {
-    //                     let neighbors = 0;
-
-    //                     operations.forEach(ele => {
-                            
-    //                         const iTemp = i + ele[0]
-    //                         const kTemp = k + ele[1]
-                            
-    //                         if(iTemp >= 0 && iTemp < rowsReference.current && kTemp >= 0 && kTemp < colReference.current) {
-    //                             neighbors += g[iTemp][kTemp]
-    //                         }
-
-    //                         // if(iTemp < 0 || iTemp > rowsReference.current) {
-    //                         //     rowsReference.current += 1;
-    //                         // }
-    //                         // if(kTemp < 0 || kTemp > colReference.current) {
-    //                         //     colReference.current += 1;
-    //                         // }
-
-    //                         if (neighbors == 3 && !g[i][k]) {
-    //                             new_grid[i][k] = 1;
-    //                         }
-    //                         else if(neighbors < 2 || neighbors > 3) {
-    //                             new_grid[i][k] = 0;
-    //                         }
-                        
-    //                     })
-                        
-    //                 }
-    //             }
-    //         });
-    //     });
-
-    //     setTimeout(runSimulation, 1000)
-    // }, []);
     const runSimulation = useCallback(() => {
         if (!runningReference.current) {
           return;
